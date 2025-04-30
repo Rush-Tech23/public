@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Metas -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="keywords" content="HTML5 Template Avo onepage themeforest" />
+    <meta
+      name="description"
+      content="Avo - Onepage Multi-Purpose HTML5 Template"
+    />
+    <meta name="author" content="" />
+
+    <!-- Title  -->
+    <title>Aumrienz</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Comfortaa:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="css/plugins.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Core Style Css -->
+    <!-- Light Theme CSS -->
+    <link rel="stylesheet" href="css/light.css" id="light-theme" disabled />
+
+    <!-- Dark Theme CSS -->
+    <link rel="stylesheet" href="css/dark.css" id="dark-theme" />
+    <style>
+      /* Smooth transition for icon change */
+      #theme-icon {
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ==================== Start Loading ==================== -->
+
+    <div id="preloader"></div>
+
+    <!-- ==================== End Loading ==================== -->
+
+    <!-- ==================== Start progress-scroll-button ==================== -->
+
+    <div class="progress-wrap cursor-pointer">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+
+    <!-- ==================== End progress-scroll-button ==================== -->
+
+    <!-- ==================== Start cursor ==================== -->
+
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+
+    <!-- ==================== End cursor ==================== -->
+
+    <!-- ==================== Start Navbar ==================== -->
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo -->
+        <a class="logo" href="#">
+          <img
+            src="img/logo_kanika.png"
+            alt="logo"
+            style="height: 50px; width: auto; padding-top: 4px"
+          />
+        </a>
+        <!-- <a class="logo" href="#">
+            <img
+              src="img/logo3.png"
+              alt="logo"
+              style="height: 60px; width: auto; padding-top: 4px"
+            />
+          </a> -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="icon-bar"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <!-- <li class="nav-item">
+            <a class="nav-link" href="showcase.html">Showcases</a>
+        </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="works.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="search">
+            <span class="icon-search pe-7s-search cursor-pointer" style="padding-top: 6px;"></span>
+            <div class="search-form text-center custom-font">
+                <form>
+                    <input type="text" name="search" placeholder="Search">
+                </form>
+            </div>
+        </div>
+          <!-- Theme Toggle Button -->
+          <div class="ml-3 d-flex align-items-center">
+            <a id="theme-toggle" class="theme-button" style="margin-left: 10px;">
+              <i id="sun-icon" class="fas fa-sun" style="color:  #facc15; font-size: 15px; "></i>
+              <i id="moon-icon" class="fas fa-moon"></i>
+            </a>
+          </div>
+
+          <script>
+            // Select the button and icon elements
+            const themeToggleButton = document.getElementById("theme-toggle");
+            const sunIcon = document.getElementById("sun-icon");
+            const moonIcon = document.getElementById("moon-icon");
+            const lightThemeLink = document.querySelector('link[href="css/light.css"]');
+            const darkThemeLink = document.querySelector('link[href="css/dark.css"]');
+          
+            // Check if the user has a theme preference in local storage
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme) {
+              // Apply the saved theme on page load
+              if (savedTheme === "dark") {
+                document.body.classList.add("dark-mode");
+                darkThemeLink.disabled = false;
+                lightThemeLink.disabled = true;
+                // Hide the sun icon and show the moon icon
+                sunIcon.style.display = "none";
+                moonIcon.style.display = "block";
+              } else {
+                document.body.classList.remove("dark-mode");
+                darkThemeLink.disabled = true;
+                lightThemeLink.disabled = false;
+                // Show the sun icon and hide the moon icon
+                sunIcon.style.display = "block";
+                moonIcon.style.display = "none";
+              }
+            }
+          
+            // Toggle theme and icon when the button is clicked
+            themeToggleButton.addEventListener("click", function () {
+              if (darkThemeLink.disabled) {
+                // Switch to dark theme
+                document.body.classList.add("dark-mode");
+                darkThemeLink.disabled = false;
+                lightThemeLink.disabled = true;
+                localStorage.setItem("theme", "dark");
+                // Hide the sun icon and show the moon icon
+                sunIcon.style.display = "none";
+                moonIcon.style.display = "block";
+              } else {
+                // Switch to light theme
+                document.body.classList.remove("dark-mode");
+                darkThemeLink.disabled = true;
+                lightThemeLink.disabled = false;
+                localStorage.setItem("theme", "light");
+                // Show the sun icon and hide the moon icon
+                sunIcon.style.display = "block";
+                moonIcon.style.display = "none";
+              }
+            });
+          
+            document.addEventListener("DOMContentLoaded", function () {
+              const logo = document.querySelector(".logo img"); // Select the logo image
+          
+              window.addEventListener("scroll", function () {
+                const savedTheme = localStorage.getItem("theme");
+          
+                // Ensure this only runs in light mode
+                if (savedTheme === "light") {
+                  if (window.scrollY > 50) {
+                    // When scrolled, change logo
+                    logo.src = "img/logo3.png";
+                  } else {
+                    // Reset to default logo
+                    logo.src = "img/logo_kanika.png";
+                  }
+                }
+              });
+            });
+          </script>
+          
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==================== End Navbar ==================== -->
+
+    <!-- ==================== Start Slider ==================== -->
+
+    <header class="slider-bus position-re valign">
+      <div class="container ontop">
+        <div class="swiper-container swiper-content">
+          <div class="swiper-wrapper">
+            <!-- First Slide -->
+            <div class="swiper-slide">
+              <div class="row">
+                <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                  <div class="caption">
+                    <h1 data-splitting>
+                      <div class="thin">Aumrienz Cloud</div>
+                      Innovation
+                    </h1>
+                    <p>
+                      Aumrienz Cloud Innovations is a leading provider of
+                      end-to-end Salesforce solutions, offering services
+                      including consulting, implementation, AppExchange app
+                      development, outsourcing, cloud advisory, and more. Our
+                      goal is to empower businesses with innovative solutions.
+                    </p>
+                    <a href="#0" class="btn-curve btn-color btn-radius mt-30">
+                      <span>Discover Work</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Slide -->
+            <div class="swiper-slide">
+              <div class="row">
+                <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                  <div class="caption">
+                    <h1 data-splitting>
+                      <div class="thin">Salesforce</div>
+                      Expertise
+                    </h1>
+                    <p>
+                      With over 10 years of experience, Aumrienz Cloud offers
+                      expertise in Salesforce consulting, implementation, and
+                      support across Sales Cloud, Service Cloud, Marketing
+                      Cloud, and more.
+                    </p>
+                    <a href="#0" class="btn-curve btn-color btn-radius mt-30">
+                      <span>Discover Work</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Third Slide -->
+            <div class="swiper-slide">
+              <div class="row">
+                <div class="col-lg-6 col-md-8 offset-lg-1 offset-md-1">
+                  <div class="caption">
+                    <h1 data-splitting>
+                      <div class="thin">Client</div>
+                      Success Stories
+                    </h1>
+                    <p>
+                      We have delivered 75+ projects to clients across various
+                      industries with a focus on 100% client satisfaction and
+                      proven results in optimizing business processes.
+                    </p>
+                    <a href="#0" class="btn-curve btn-color btn-radius mt-30">
+                      <span>Discover Work</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Slides -->
+      <div class="swiper-container swiper-img">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide bg-img"
+            data-background="img/Expertise.avif"
+            data-overlay-dark="6"
+          ></div>
+          <div
+            class="swiper-slide bg-img"
+            data-background="img/pexels.jpg"
+            data-overlay-dark="6"
+          ></div>
+          <div
+            class="swiper-slide bg-img"
+            data-background="img/Innovation.avif"
+            data-overlay-dark="6"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Curve Background -->
+      <div class="curve-bg bg-img" data-background="img/business-bg.png"></div>
+
+      <!-- Slider Controls -->
+      <div class="setone">
+        <div
+          class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <div
+          class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination custom-font"></div>
+    </header>
+
+    <!-- ==================== End Slider ==================== -->
+
+    <!-- ==================== Start about ==================== -->
+
+    <section class="about section-padding">
+      <div class="container">
+        <div class="row" style="display: flex; align-items: center">
+          <!-- Image Section First -->
+          <div class="col-lg-6">
+            <div class="blc-img">
+              <div
+                class="bimg wow imago"
+                data-wow-duration="1s"
+                data-wow-delay="0.3s"
+              >
+                <img
+                  src="img/intro/3.jpg"
+                  alt="Aumrienz Cloud Technologies"
+                  style="width: 100%; border-radius: 10px"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Section -->
+          <div class="col-lg-6 valign">
+            <div
+              class="content wow fadeInRight"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
+              <!-- Title Section -->
+              <div
+                class="sub-title wow fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+              >
+                <h6 style="font-size: 24px">About Us</h6>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <h3
+                class="co-tit custom-font wow"
+                data-splitting
+                data-wow-duration="1s"
+                data-wow-delay="0.4s"
+              >
+                Transforming Businesses with Salesforce
+              </h3>
+
+              <!-- Description Section -->
+              <p
+                class="wow fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay=".4s"
+              >
+                Aumrienz Cloud Technologies is your trusted partner for
+                end-to-end Salesforce solutions, specializing in:
+              </p>
+
+              <ul
+                class="wow fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay=".6s"
+                style="padding-left: 20px; margin-top: 10px"
+              >
+                <li>
+                  🚀 <strong>Salesforce Consulting & Implementation</strong>
+                </li>
+                <li>
+                  🔧
+                  <strong>CRM Customization & AppExchange Development</strong>
+                </li>
+                <li>👩‍💻 <strong>Staff Augmentation & Cloud Advisory</strong></li>
+                <li>
+                  🎓 <strong>Corporate Training & Workforce Development</strong>
+                </li>
+              </ul>
+
+              <p
+                class="mt-10 wow fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay=".8s"
+              >
+                Led by <strong style="color: #75dab4">Kanika Chauhan</strong>, a
+                Salesforce expert with 10+ years of experience, our mission is
+                to empower businesses through innovative solutions and seamless
+                digital transformation.
+              </p>
+
+              <!-- Stats Section -->
+
+              <div
+                class="skills-circle wow fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="1s"
+                style="display: flex; gap: 20px; margin-top: 20px"
+              >
+                <div class="item" style="text-align: center">
+                  <div class="skill" data-value="0.98">
+                    <span class="custom-font">99.99%</span>
+                  </div>
+                  <div class="cont">
+                    <span>Client</span>
+                    <h6>Satisfaction</h6>
+                  </div>
+                </div>
+                <div class="item" style="text-align: center">
+                  <div class="skill" data-value="0.98">
+                    <span class="custom-font">99.99%</span>
+                  </div>
+                  <div class="cont">
+                    <span>Successful</span>
+                    <h6>Projects</h6>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <a
+                href="#0"
+                class="simple-btn custom-font mt-30 wow fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="1.2s"
+              >
+                <span>Discover More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== End about ==================== -->
+
+    <!-- ==================== Start Services ==================== -->
+
+    <section class="services section-padding">
+      <div class="container position-re">
+        <div class="sec-head custom-font tr-head">
+          <h6 style="font-size: 24px">Our Expertise</h6>
+          <h3>Services.</h3>
+          <span class="tbg tr-head">Services</span>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+            <div class="step-item xtop">
+              <span class="icon pe-7s-gleam"></span>
+              <h6>Salesforce Consulting & Implementation</h6>
+              <p>
+                End-to-end Salesforce solutions tailored to optimize business
+                operations and efficiency.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+            <div class="step-item xcolor">
+              <span class="icon pe-7s-phone"></span>
+              <h6>AppExchange Development & Support</h6>
+              <p>
+                Custom AppExchange applications that enhance business processes
+                and workflows.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay=".9s">
+            <div class="step-item xbottom">
+              <span class="icon pe-7s-magic-wand"></span>
+              <h6>Salesforce Support & Maintenance</h6>
+              <p>
+                Comprehensive Salesforce maintenance and support for smooth,
+                uninterrupted operations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hidden Cards Initially -->
+          <div class="col-lg-4 wow fadeInUp hidden" data-wow-delay="1.2s">
+            <div class="step-item xtop">
+              <span class="icon pe-7s-users"></span>
+              <h6>Outsourcing & Staff Augmentation</h6>
+              <p>
+                Expert Salesforce professionals to strengthen your in-house team
+                and accelerate growth.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp hidden" data-wow-delay="1.5s">
+            <div class="step-item xcolor">
+              <span class="icon pe-7s-study"></span>
+              <h6>Corporate Salesforce Trainings</h6>
+              <p>
+                Customized Salesforce training programs for enterprises to
+                upskill their workforce.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp hidden" data-wow-delay="1.8s">
+            <div class="step-item xbottom">
+              <span class="icon pe-7s-id"></span>
+              <h6>Individual Trainings & Career Guidance</h6>
+              <p>
+                Salesforce training and career guidance to help professionals
+                excel in the ecosystem.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp hidden" data-wow-delay="2.1s">
+            <div class="step-item xtop">
+              <span class="icon pe-7s-tools"></span>
+              <h6>Product Development</h6>
+              <p>
+                Innovative Salesforce-based product development to drive
+                business transformation.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="smore custom-font">
+          <a href="#0" id="toggle-button">Show More</a>
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.getElementById("toggle-button");
+        const hiddenCards = document.querySelectorAll(".hidden");
+
+        toggleButton.addEventListener("click", function (e) {
+          e.preventDefault();
+          hiddenCards.forEach((card) => card.classList.toggle("hidden"));
+
+          // Toggle button text
+          if (toggleButton.textContent === "Show More") {
+            toggleButton.textContent = "Show Less";
+          } else {
+            toggleButton.textContent = "Show More";
+          }
+        });
+      });
+    </script>
+
+    <style>
+      /* Hide initially */
+      .hidden {
+        display: none;
+      }
+    </style>
+
+    <!-- ==================== End Services ==================== -->
+
+    <!-- ==================== Start block-sec ==================== -->
+
+    <section class="block-sec">
+      <div
+        class="background bg-img section-padding pb-0"
+        data-background="img/pattern.png"
+      >
+        <div class="container">
+          <div class="number-sec">
+            <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <div class="item no-bord">
+                  <span class="icon pe-7s-smile"></span>
+                  <h3 class="custom-font"><span class="count">2400</span></h3>
+                  <p class="wow txt" data-splitting>Happy Clients</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="item">
+                  <span class="icon pe-7s-portfolio"></span>
+                  <h3 class="custom-font"><span class="count">133</span></h3>
+                  <p class="wow txt" data-splitting>Complete Projects</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="item">
+                  <span class="icon pe-7s-cloud-download"></span>
+                  <h3 class="custom-font"><span class="count">254</span> k</h3>
+                  <p class="wow txt" data-splitting>Files Downloaded</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="item">
+                  <span class="icon pe-7s-medal"></span>
+                  <h3 class="custom-font"><span class="count">46</span></h3>
+                  <p class="wow txt" data-splitting>Award Win</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showreel">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-9">
+                <div class="video-box">
+                  <div class="tit-text">
+                    <h3 class="tbg" data-splitting>Showreel</h3>
+                  </div>
+                  <div class="wow imago">
+                    <div class="img">
+                      <img
+                        src="https://img.youtube.com/vi/oMRR_uRfvRw/maxresdefault.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="vid-icon">
+                      <a
+                        class="vid"
+                        href="https://youtu.be/oMRR_uRfvRw?si=vjCjqZ7Gt4kAxaMo"
+                      >
+                        <div class="vid-butn">
+                          <span class="icon">
+                            <i class="fas fa-play"></i>
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== End block-sec ==================== -->
+
+    <!-- ==================== Start Works ==================== -->
+    <section class="work-carousel section-padding caroul sub-bg position-re">
+      <div class="container-fluid mt-100">
+        <!-- Section Header -->
+        <div class="sec-head custom-font text-center">
+          <h6 style="font-size: 24px; color: #75dab4; margin-bottom: 5px">
+            Our Works
+          </h6>
+          <h3 style="font-size: 50px; font-weight: bold">Our Expertise</h3>
+          <span class="tbg">Portfolio</span>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="container">
+          <div
+            class="row"
+            style="display: flex; flex-wrap: wrap; align-items: stretch"
+          >
+            <!-- Cards -->
+            <div class="col-lg-4 mb-4 d-flex">
+              <div
+                style="
+                  flex: 1;
+                  background: rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(10px);
+                  border-radius: 15px;
+                  padding: 20px;
+                  text-align: center;
+                  color: white;
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                  min-height: 230px;
+                "
+              >
+                <i
+                  class="fas fa-chart-line"
+                  style="font-size: 50px; color: #75dab4; margin-top: 25px; margin-bottom: 10px;"
+                ></i>
+                <h6 style="font-size: 22px; ">Sales Cloud</h6>
+                <p style="font-size: 15px ">
+                  Boost sales with AI-driven insights.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 d-flex">
+              <div
+                style="
+                  flex: 1;
+                  background: rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(10px);
+                  border-radius: 15px;
+                  padding: 20px;
+                  text-align: center;
+                  color: white;
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                  min-height: 230px;
+                "
+              >
+                <i
+                  class="fas fa-cloud"
+                  style="font-size: 50px; color: #75dab4; margin-top: 25px; margin-bottom: 10px;"
+                ></i>
+                <h6 style="font-size: 22px; ">Service Cloud</h6>
+                <p style="font-size: 15px">
+                  Optimize customer support efficiency.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 d-flex">
+              <div
+                style="
+                  flex: 1;
+                  background: rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(10px);
+                  border-radius: 15px;
+                  padding: 20px;
+                  text-align: center;
+                  color: white;
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                  min-height: 230px;
+                "
+              >
+                <i
+                  class="fas fa-cogs"
+                  style="font-size: 50px; color: #75dab4; margin-top: 25px; margin-bottom: 10px;"
+                ></i>
+                <h6 style="font-size: 22px; ">Salesforce CPQ</h6>
+                <p style="font-size: 15px">
+                  Automate pricing and quotes for efficiency.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 d-flex">
+              <div
+                style="
+                  flex: 1;
+                  background: rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(10px);
+                  border-radius: 15px;
+                  padding: 20px;
+                  text-align: center;
+                  color: white;
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                  min-height: 230px;
+                "
+              >
+                <i
+                  class="fas fa-users"
+                  style="font-size: 50px; color: #75dab4;margin-top: 25px; margin-bottom: 10px;"
+                ></i>
+                <h6 style="font-size: 22px; ">
+                  Experience Cloud
+                </h6>
+                <p style="font-size: 15px">
+                  Connect with customers through an intuitive platform.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 d-flex">
+              <div
+                style="
+                  flex: 1;
+                  background: rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(10px);
+                  border-radius: 15px;
+                  padding: 20px;
+                  text-align: center;
+                  color: white;
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                  min-height: 230px;
+                "
+              >
+                <i
+                  class="fas fa-bullhorn"
+                  style="font-size: 50px; color: #75dab4;margin-top: 25px; margin-bottom: 10px;"
+                ></i>
+                <h6 style="font-size: 22px;">Marketing Cloud</h6>
+                <p style="font-size: 15px">
+                  Enhance customer engagement with automation.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 d-flex">
+              <div
+                style="
+                  flex: 1;
+                  background: rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(10px);
+                  border-radius: 15px;
+                  padding: 20px;
+                  text-align: center;
+                  color: white;
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                  min-height: 230px;
+                "
+              >
+                <i
+                  class="fas fa-laptop"
+                  style="font-size: 50px; color: #75dab4; margin-top: 25px; margin-bottom: 10px;"
+                ></i>
+                <h6 style="font-size: 22px;"">
+                  AppExchange Development
+                </h6>
+                <p style="font-size: 15px">
+                  Develop and customize Salesforce applications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== End Works ==================== -->
+    <section class="project-achievements section-padding">
+      <div class="container position-re">
+        <div class="sec-head custom-font text-center" style="margin-bottom: 50px ">
+          <h6
+            style="
+              font-size: 34px;
+              color: #75dab4;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              font-weight: 500;
+            "
+          >
+            Big Project Achievements
+          </h6>
+          <h3 style="font-size: 50px; font-weight: bold">
+            Our Successful Projects
+          </h3>
+          <span class="tbg">Achievements</span>
+        </div>
+    
+        <div class="row justify-content-center">
+          <!-- Project 1 -->
+          <div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay=".3s">
+            <div class="achievement-item card">
+              <i class="fas fa-building icon"></i>
+              <h4 class="card-title">Real Estate </h4>
+              <p class="card-text"><strong>Domain:</strong> Real Estate</p>
+              <p class="card-text"><strong>Project Hours:</strong> 800 hrs</p>
+              <p class="card-text"><strong>Time Period:</strong> 6 months</p>
+              <p class="card-text">
+                <strong>Cloud:</strong>
+                <span class="highlight">Sales Cloud</span>
+              </p>
+              <p class="card-text">
+                <strong>Success Rate:</strong> ⭐⭐⭐⭐⭐ 
+              </p>
+            </div>
+          </div>
+    
+          <!-- Project 2 -->
+          <div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay=".6s">
+            <div class="achievement-item card">
+              <i class="fas fa-industry icon"></i>
+              <h4 class="card-title">Manufacturing </h4>
+              <p class="card-text"><strong>Domain:</strong> Manufacturing</p>
+              <p class="card-text"><strong>Project Hours:</strong> 600 hrs</p>
+              <p class="card-text"><strong>Time Period:</strong> 4 months</p>
+              <p class="card-text">
+                <strong>Cloud:</strong>
+                <span class="highlight">Salesforce CPQ</span>
+              </p>
+              <p class="card-text">
+                <strong>Success Rate:</strong> ⭐⭐⭐⭐⭐
+              </p>
+            </div>
+          </div>
+    
+          <!-- Project 3 -->
+          <div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay=".9s">
+            <div class="achievement-item card">
+              <i class="fas fa-laptop-house icon"></i>
+              <h4 class="card-title">Tech Solutions</h4>
+             <p class="card-text"><strong>Domain:</strong> Technology</p>
+              <p class="card-text"><strong>Project Hours:</strong> 750 hrs</p>
+              <p class="card-text"><strong>Time Period:</strong> 5 months</p>
+              <p class="card-text">
+                <strong>Cloud:</strong>
+                <span class="highlight">AWS</span>
+              </p>
+              <p class="card-text">
+                <strong>Success Rate:</strong> ⭐⭐⭐⭐⭐
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>  .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }</style>
+
+    <!-- ==================== Start testimonials ==================== -->
+
+    <section class="testimonials section-padding">
+      <div class="container position-re">
+        <div class="sec-head custom-font text-center">
+          <h6
+            class="wow fadeIn"
+            data-wow-delay=".5s"
+            style="font-size: 24px; font-weight: 500"
+          >
+            What People Say?
+          </h6>
+          <h3 class="wow" data-splitting>Testimonials.</h3>
+          <span class="tbg">Testimonials</span>
+        </div>
+        <div
+          class="row justify-content-center wow fadeInUp"
+          data-wow-delay=".5s"
+        >
+          <div class="col-lg-8">
+            <div class="slic-item">
+              <!-- First Testimonial -->
+              <div class="item">
+                <p>
+                  Aumrienz Clouds was amazing to work with. Their team solved
+                  every challenge we faced. Highly recommended for Salesforce
+                  projects!
+                </p>
+                <div class="info">
+                  <div class="cont">
+                    <div class="author">
+                      <div class="img">
+                        <img src="img/clients/1.jpg" alt="Hayya Lee" />
+                      </div>
+                      <h6 class="author-name custom-font">Hayya Lee</h6>
+                      <span class="author-details">CEO, NextChapters</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second Testimonial -->
+              <div class="item">
+                <p>
+                  Great experience, easy communication. Delivered exactly what
+                  we needed. 100% satisfied with the outcome!
+                </p>
+                <div class="info">
+                  <div class="cont">
+                    <div class="author">
+                      <div class="img">
+                        <img src="img/clients/2.jpg" alt="Teamwear" />
+                      </div>
+                      <h6 class="author-name custom-font">Teamwear</h6>
+                      <span class="author-details">Pacelli Sports</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Third Testimonial -->
+              <div class="item">
+                <p>
+                  Top-notch Salesforce developers! Solved my APEX issues
+                  quickly. Professional and highly skilled team.
+                </p>
+                <div class="info">
+                  <div class="cont">
+                    <div class="author">
+                      <div class="img">
+                        <img src="img/clients/3.jpg" alt="Boca Ratoo" />
+                      </div>
+                      <h6 class="author-name custom-font">Boca Ratoo</h6>
+                      <span class="author-details">Satisfied Client</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="arrows">
+          <div class="next cursor-pointer">
+            <span class="pe-7s-angle-right"></span>
+          </div>
+          <div class="prev cursor-pointer">
+            <span class="pe-7s-angle-left"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== End testimonials ==================== -->
+
+    <!-- ==================== Start Blog ==================== -->
+
+    <section class="blog-grid section-padding sub-bg">
+      <div class="container">
+        <div class="sec-head custom-font text-center">
+          <h6 class="wow fadeIn" data-wow-delay=".5s" style="font-size: 24px; font-weight: 500">
+            Latest News
+          </h6>
+          <h3 class="wow" data-splitting>Our Blogs.</h3>
+          <span class="tbg">Blogs</span>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+            <div class="item bg-img" data-background="img/blog/1.jpg">
+              <div class="cont">
+                <a href="#0" class="date custom-font">
+                  <span><i>06</i> Aug 2019</span>
+                </a>
+                <div class="info custom-font">
+                  <a href="#0" class="author">
+                    <span>by / Kanika Chauhan</span>
+                  </a>
+                </div>
+                <h6>
+                  <a href="#0">Salesforce CPQ: Why Every Sales Team Needs It.</a>
+                </h6>
+                <div class="btn-more custom-font">
+                  <a href="https://medium.com/@forceGalaxy/salesforce-cpq-why-every-sales-team-needs-it-4ddc6a6d62af" class="simple-btn" target="_blank">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+            <div class="item active bg-img" data-background="img/blog/blog.jpg">
+              <div class="cont">
+                <a href="#0" class="date custom-font">
+                  <span><i>06</i> Aug 2019</span>
+                </a>
+                <div class="info custom-font">
+                  <a href="#0" class="author">
+                    <span>by / Kanika Chauhan</span>
+                  </a>
+                </div>
+                <h6>
+                  <a href="#0">Preparing for Salesforce Certification Exams in 2025.</a>
+                </h6>
+                <div class="btn-more custom-font">
+                  <a href="https://medium.com/@forceGalaxy/preparing-for-salesforce-certification-exams-in-2025-tips-resources-7063d4b1348c" class="simple-btn" target="_blank">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 wow fadeInUp" data-wow-delay=".9s">
+            <div class="item bg-img" data-background="img/blog/3.jpg">
+              <div class="cont">
+                <a href="#0" class="date custom-font">
+                  <span><i>06</i> Aug 2019</span>
+                </a>
+                <div class="info custom-font">
+                  <a href="#0" class="author">
+                    <span>by / Kanika Chauhan</span>
+                  </a>
+                </div>
+                <h6>
+                  <a href="#0">Career in Salesforce in 2025: Key Trends and Opportunities</a>
+                </h6>
+                <div class="btn-more custom-font">
+                  <a href="https://medium.com/@forceGalaxy/career-in-salesforce-in-2025-key-trends-and-opportunities-6f4f4925c463" class="simple-btn" target="_blank">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- ==================== End Blog ==================== -->
+
+    <section class="founder section-padding">
+      <div class="container position-re">
+        <!-- Heading Section -->
+        <div class="sec-head custom-font text-center">
+          <h6 class="wow fadeIn" data-wow-delay=".5s" style="font-size: 28px">
+            Meet Our Founder
+          </h6>
+          <h3 class="wow" data-splitting>Kanika Chauhan</h3>
+          <span class="tbg">Founder & CEO</span>
+        </div>
+
+        <!-- Image & Text Row -->
+        <div class="row justify-content-center align-items-center">
+          <!-- Left Side - Founder Image -->
+          <div class="col-lg-4">
+            <div class="founder-img">
+              <img src="img/kanikaprofile.jpeg" alt="Kanika Chauhan" />
+            </div>
+          </div>
+
+          <!-- Right Side - Founder Details -->
+          <div class="col-lg-6">
+            <div class="founder-details">
+              <h4>Salesforce Expert & Architect</h4>
+              <p>
+                Kanika Chauhan, Founder and CEO of Aumrienz Clouds Pvt Ltd and
+                forceGalaxy. With over 9+ years of experience as a Salesforce
+                Expert, Consultant, and Trainer, I’ve dedicated my career to
+                empowering businesses and individuals to achieve success with
+                Salesforce.
+              </p>
+              <br />
+              <p>
+                At Aumrienz Clouds, we specialize in delivering tailored
+                Salesforce consulting services across Sales Cloud, Service
+                Cloud, CPQ, Marketing Cloud, and Experience Cloud, etc.
+              </p>
+              <br />
+              <p>
+                Through innovative strategies and hands-on guidance, I’ve helped
+                15+ companies optimize workflows, implement seamless
+                configurations, and achieve measurable growth.
+              </p>
+              <br />
+              <!-- <p>Let’s work together to transform your business with Salesforce!</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Start Footer ==================== -->
+
+    <footer class="footer-half sub-bg section-padding pb-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="cont">
+              <div class="logo">
+                <a href="#0">
+                  <img
+                    src="img/logo_kanika.png"
+                    alt="Aumrienz Clouds Logo"
+                    style="height: 60px; width: auto"
+                  />
+                </a>
+              </div>
+              <div class="con-info custom-font" style="font-size: 18px">
+                <ul>
+                  <li><span>Email : </span> contact@aumrienzclouds.com</li>
+                  <li><span>Phone : </span> +91-6352156886</li>
+                  <li>
+                    <span>Website : </span>
+                    <a href="https://www.forcegalaxy360.com" target="_blank"
+                      >www.forcegalaxy360.com</a
+                    >
+                    &
+                    <a href="https://www.aumrienz.com" target="_blank"
+                      >aumrienz.com</a
+                    >
+                  </li>
+                  <li>
+                    <span>Location : </span> Udyog Vihar Phase 1, Sector 20,
+                    Gurugram, Haryana 122016
+                  </li>
+                </ul>
+              </div>
+              <div class="social-icon" style="font-size: 18px">
+                <h6 class="custom-font stit simple-btn">Follow Us</h6>
+                <div class="social">
+                  <a
+                    href="https://www.youtube.com/c/forceGalaxy"
+                    class="icon"
+                    target="_blank"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/kanika-chauhan-b130a0100/"
+                    class="icon"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/aumrienz-clouds-pvt-ltd"
+                    class="icon"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 offset-lg-2">
+            <div class="subscribe mb-50">
+              <h6 class="custom-font stit simple-btn" style="font-size: 20px">
+                Newsletter
+              </h6>
+              <p style="font-size: 18px">Sign up for our newsletter!</p>
+              <form>
+                <div class="form-group custom-font">
+                  <input
+                    type="email"
+                    name="subscribe"
+                    placeholder="Your Email"
+                    style="font-size: 16px"
+                  />
+                  <button
+                    class="cursor-pointer"
+                    style="font-size: 18px; padding: 10px 20px"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="insta">
+              <h6 class="custom-font stit simple-btn" style="font-size: 20px">
+                Instagram Post
+              </h6>
+              <div class="insta-gallary">
+                <a href="#0">
+                  <img src="img/insta/1.jpg" alt="Instagram Image 1" />
+                </a>
+                <a href="#0">
+                  <img src="img/insta/2.jpg" alt="Instagram Image 2" />
+                </a>
+                <a href="#0">
+                  <img src="img/insta/3.jpg" alt="Instagram Image 3" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyrights text-center">
+          <!-- <p style="font-size: 16px;">© 2020, Aumrienz Clouds. Made with passion by <a href="https://leoapex.com/">UI-ThemeZ</a>.</p> -->
+          <a
+            href="https://leoapex.com/"
+            target="_blank"
+            style="font-size: 16px; margin-top: 5px"
+          >
+            Aumrienz Clouds©2025 All rights reserved.<br />
+            Made with ❤️ by <strong>Leo Apex</strong>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==================== End Footer ==================== -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+
+    <!-- plugins -->
+    <script src="js/plugins.js"></script>
+
+    <!-- custom scripts -->
+    <script src="js/scripts.js"></script>
+  </body>
+
+  <!-- Mirrored from ui-themez.smartinnovates.net/items/avo/avo-dark/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Feb 2025 08:15:45 GMT -->
+</html>
